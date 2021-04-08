@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="OperativniSistemiApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OperativniSistemiApp"
+    xmlns:controls="using:OperativniSistemiApp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="20, 10, 10, 20">
+        <TextBlock Text="Push the button." Style="{ThemeResource HeaderTextBlockStyle}"/>
+        <Button x:Name="coolButton" Margin="5,5,5,5" Click="Button_Click">
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Accept" Margin="0,0,5,0"/>
+                <TextBlock Text="Button"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="badButton" Margin="5,5,5,5" Click="BadButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Cancel" Margin="0,0,5,0"/>
+                <TextBlock Text="Button"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="listButton" Margin="5,5,5,5" Click="ListButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="List" Margin="0,0,5,0"/>
+                <TextBlock Text="List Button"/>
+            </StackPanel>
+        </Button>
+        <TextBlock Text="Above sits the button." FontSize="12"/>
+        <TextBlock x:Name="resultText" Text="Above sits the button." Margin="5"/>
+        <ProgressBar x:Name="progressBar" Maximum="10" Value="0" Margin="0,20,0,20"/>
+        <StackPanel x:Name="stackPanel"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBox x:Name="urlText" Width="300px"/>
+            <Button x:Name="downloadButton" Content="Download" Margin="5" Click="DownloadButton_Click"/>
+        </StackPanel>
+        <ProgressRing x:Name="progressRing" Width="100" Height="100" Visibility="Collapsed" IsActive="True"/>
+        <Button Content="Next page" Click="Button_Click_1" />
+        <controls:CustomControl Height="64" HorizontalAlignment="Stretch" Margin="0,100,0,0"/>
+    </StackPanel>
+</Page>
